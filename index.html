@@ -1,52 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script>
-	 $(document).ready(function(){
-      var width = screen.width,
- 
-        if (screen.width <= 320) {
-		
-		$('#lan').remove();
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var width = screen.width;
+            console.log(width);
+            if (screen.width <= 500) {
+
+                $('#big').remove();
+            }
+            else {
+                $('#small').remove();
+            }
+        });	
+    </script>
+
+    <style>
+        .desk {
+            width: 400px;
+            height: 200px;
+            background: red;
         }
-});	
-	</script>
- 
-<style>
-.desk{
-  width:400px;
-  height:200px;
-  background:red;
-}
-.div-only-mobile{
-  width:400px;
-  height:200px;
-  background:orange;
-}
-@media screen and (max-width : 1920px){
-  .div-only-mobile{
-  visibility:hidden;
-  }
-}
-@media screen and (max-width : 906px){
- .desk{
-  visibility:hidden;
-  }
- .div-only-mobile{
-  visibility:visible;
-  }
-}
-</style>
+
+        .div-only-mobile {
+            width: 400px;
+            height: 200px;
+            background: orange;
+        }
+    </style>
 </head>
+
 <body>
-<div>Hello JET!</div>
-<div class="desk" id="lan">Content for Large Screen Only</div>
+    <div>Hello JET!</div>
+    <div class="desk" id="big">Content for Large Screen Only</div>
+    <div class="div-only-mobile" id="small">Content for Small Screen Only</div>
 
 
 
 </body>
+
 </html>
-
-
-
