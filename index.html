@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  $(document).ready(function(){
+      var width = screen.width,
+ 
+        if (screen.width <= 320) {
+		
+		$('#lan').remove();
+        }
+});
 <style>
 .desk{
   width:400px;
@@ -29,8 +38,8 @@
 </head>
 <body>
 <div>Hello JET!</div>
-<div class="desk">Large Screen</div>
-<div class="div-only-mobile">Only Mobile</div>
+<div class="desk" id="lan">Content for Large Screen Only</div>
+
 
 
 </body>
